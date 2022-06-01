@@ -60,6 +60,7 @@
 
 <script>
 import { BFormInput, BRow, BCol } from "bootstrap-vue";
+import axios from 'axios'
 export default {
   name: "App",
   components: {
@@ -79,13 +80,23 @@ export default {
   methods: {
     fetchWeather(e) {
       if (e.key == "Enter") {
-        fetch(`${this.url}weather?q=${this.query}&appid=${this.API_key}`)
-          .then((res) => {
-            return res.json();
-          })
+        //using fetch to get data
+
+        // fetch(`${this.url}weather?q=${this.query}&appid=${this.API_key}`)
+        //   .then((res) => {
+        //     return res.json();
+        //   })
+        //   .then((response) => {
+        //     this.res = response;
+        //     console.log(this.res);
+        //   });
+
+        //using axios to get data
+
+        axios.get(`${this.url}weather?q=${this.query}&appid=${this.API_key}`)
           .then((response) => {
-            this.res = response;
-            console.log(this.res);
+            console.log(response)
+            this.res = response.data;
           });
       }
     },
