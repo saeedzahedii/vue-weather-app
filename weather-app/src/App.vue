@@ -53,33 +53,6 @@
             </b-row>
           </div>
         </div>
-
-
-
-
-        <!-- <div v-if="typeof res.main != 'undefined'" class="results mt-5">
-          <div class="box name">
-            <h3>{{ res.name }} - {{ res.sys.country }}</h3>
-            <hr />
-            <p>{{ today }} - {{ time }}</p>
-          </div>
-          <div class="box dgr">
-            <span class="weather-dgr">{{ Math.floor(res.main.temp - 273.15) }} ℃ </span>
-            <hr>
-            <div><span><img :src="'http://openweathermap.org/img/w/' + res.weather[0].icon + '.png'" alt=""></span>{{
-                res.weather[0].main
-            }}</div>
-          </div>
-          <div class="box">
-            <p>Humidity : {{ res.main.humidity }}</p>
-            <p>Pressure : {{ Math.floor(res.main.pressure - 273.15) }} ℃</p>
-          </div>
-          <div class="box">
-            <p>Feels Like : {{ res.main.feels_like }}</p>
-            <p>Min Temp : {{ Math.floor(res.main.temp_min - 273.15) }} ℃</p>
-            <p>Max Temp : {{ Math.floor(res.main.temp_max - 273.15) }} ℃</p>
-          </div>
-        </div> -->
       </div>
     </main>
   </div>
@@ -183,7 +156,8 @@ main {
 .extra-res p {
   margin: 0px;
 }
-.row{
+
+.row {
   align-items: flex-end;
 }
 
@@ -197,9 +171,4 @@ main {
   font-weight: 600;
   font-size: 18px;
 }
-
-/* .weather-dgr {
-  font-weight: 900;
-  font-size: 60px;
-} */
 </style>
